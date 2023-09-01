@@ -1,0 +1,12 @@
+E:\dreamsavior\git\VNTranslationTools\Build\VNTextPatch\FreeMote.LICENSE.txt
+E:\dreamsavior\git\VNTranslationTools\Build\VNTextPatch\names.xml
+E:\dreamsavior\git\VNTranslationTools\Build\VNTextPatch\template.xlsx
+E:\dreamsavior\git\VNTranslationTools\Build\VNTextPatch\VNTextPatch.exe.config
+E:\dreamsavior\git\VNTranslationTools\Build\VNTextPatch\VNTextPatch.exe
+E:\dreamsavior\git\VNTranslationTools\Build\VNTextPatch\VNTextPatch.pdb
+E:\dreamsavior\git\VNTranslationTools\VNTextPatch\obj\Release\VNTextPatch.csproj.AssemblyReference.cache
+E:\dreamsavior\git\VNTranslationTools\VNTextPatch\obj\Release\VNTextPatch.exe.config
+E:\dreamsavior\git\VNTranslationTools\VNTextPatch\obj\Release\VNTextPatch.csproj.CoreCompileInputs.cache
+E:\dreamsavior\git\VNTranslationTools\VNTextPatch\obj\Release\VNTextPatch.csproj.CopyComplete
+E:\dreamsavior\git\VNTranslationTools\VNTextPatch\obj\Release\VNTextPatch.exe
+E:\dreamsavior\git\VNTranslationTools\VNTextPatch\obj\Release\VNTextPatch.pdb

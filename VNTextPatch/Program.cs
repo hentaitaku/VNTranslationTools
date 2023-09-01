@@ -57,15 +57,19 @@ namespace VNTextPatch
                 PrintUsage();
                 return;
             }
+            Console.WriteLine("Extracting to local path");
 
             string inputPath = Path.GetFullPath(args[1]);
             string textPath = Path.GetFullPath(args[2]);
+
 
             ScriptLocation inputLocation;
             if (!TryParseLocalPath(inputPath, options.Format, out inputLocation))
                 return;
 
+
             ScriptLocation textLocation = GetLocalTextScriptLocation(inputLocation, textPath);
+
 
             Extracter extracter = new Extracter(inputLocation.Collection, textLocation.Collection);
             try
@@ -86,6 +90,7 @@ namespace VNTextPatch
                 if (textCollection is ExcelScriptCollection && extracter.TotalLines == 0)
                     File.Delete(textPath);
             }
+
 
             CharacterNames.Save();
         }
@@ -270,6 +275,8 @@ namespace VNTextPatch
         private static void PrintUsage()
         {
             string assemblyName = Assembly.GetExecutingAssembly().GetName().Name;
+            string version = Assembly.GetExecutingAssembly().GetName().Version.ToString();
+            Console.WriteLine($"VNTextPatch v. {version}");
             Console.WriteLine($"Usage:");
             Console.WriteLine($"    {assemblyName} extractlocal infile|infolder scriptfile|scriptfolder");
             Console.WriteLine($"    {assemblyName} insertlocal infile|infolder scriptfile|scriptfolder outfile|outfolder");
