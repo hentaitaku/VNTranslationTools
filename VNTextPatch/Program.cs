@@ -287,10 +287,12 @@ namespace VNTextPatch
                     if (arg == "--read-utf8")
                     {
                         GlobalVariables.ReadUtf8 = true;
+                        continue;
                     }
                     if (arg == "--write-utf8")
                     {
                         GlobalVariables.WriteUtf8 = true;
+                        continue;
                     }
                     Match match = Regex.Match(arg, @"--(?<name>\w+)=(?<value>.*)$");
                     if (!match.Success)
