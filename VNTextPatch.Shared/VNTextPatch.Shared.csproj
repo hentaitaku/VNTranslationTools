@@ -55,6 +55,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="GlobalVar.cs" />
     <Compile Include="ILineStatistics.cs" />
     <Compile Include="Scripts\AdvHd\AdvHdDisassemblerBase.cs" />
     <Compile Include="Scripts\AdvHd\AdvHdDisassemblerV1.cs" />
