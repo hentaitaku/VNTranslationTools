@@ -64,7 +64,7 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
         {
             long position = reader.BaseStream.Position;
             reader.BaseStream.Position = offset;
-            string str = reader.ReadZeroTerminatedSjisString();
+            string str = GlobalVariables.ReadUtf8 ? reader.ReadZeroTerminatedUtf8String() : reader.ReadZeroTerminatedSjisString();
             reader.BaseStream.Position = position;
             return str;
         }
@@ -100,7 +100,13 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
                     if (!stringOffsets.TryGetValue(text, out offset))
                     {
                         offset = _codeOffset + _codeLength + (int)stringStream.Length;
-                        stringWriter.WriteZeroTerminatedSjisString(text);
+                        if (GlobalVariables.WriteUtf8)
+                        {
+                            stringWriter.WriteZeroTerminatedUtf8String(text);
+                        } else
+                        {
+                            stringWriter.WriteZeroTerminatedSjisString(text);
+                        }
                         stringOffsets.Add(text, offset);
                     }
 
