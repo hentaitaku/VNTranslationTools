@@ -40,6 +40,11 @@ namespace VNTextPatch.Shared.Scripts.TmrHiroAdvSystem
                     yield return new HiroTextInstruction(instrOffset, instrLength, HiroStringType.Select);
                 }
 
+                if (stream.Position >= stream.Length)
+                {
+                    break;
+                }
+
                 stream.Position = instrOffset + instrLength;
             }
         }
