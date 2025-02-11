@@ -294,6 +294,11 @@ namespace VNTextPatch
                         GlobalVariables.WriteUtf8 = true;
                         continue;
                     }
+                    if (arg == "--no-wrap")
+                    {
+                        GlobalVariables.NoWrap = true;
+                        continue;
+                    }
                     Match match = Regex.Match(arg, @"--(?<name>\w+)=(?<value>.*)$");
                     if (!match.Success)
                     {
