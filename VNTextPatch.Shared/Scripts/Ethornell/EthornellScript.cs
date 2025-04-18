@@ -105,7 +105,13 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
                         offset = _codeOffset + _codeLength + (int)stringStream.Length;
                         if (GlobalVariables.WriteUtf8 && !GlobalVariables.jisStrings.Contains(text))
                         {
-                            stringWriter.WriteZeroTerminatedUtf8String(text);
+                            if (GlobalVariables.jisStrings.Count() > 0)
+                            {
+                                stringWriter.WriteMixedString(text);
+                            } else
+                            {
+                                stringWriter.WriteZeroTerminatedUtf8String(text);
+                            }
                         } else
                         {
                             stringWriter.WriteZeroTerminatedSjisString(text);
