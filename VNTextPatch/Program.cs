@@ -299,6 +299,11 @@ namespace VNTextPatch
                         GlobalVariables.NoWrap = true;
                         continue;
                     }
+                    if (arg.StartsWith("-j"))
+                    {
+                        GlobalVariables.jisStrings.Add(arg.Substring(2));
+                        continue;
+                    }
                     Match match = Regex.Match(arg, @"--(?<name>\w+)=(?<value>.*)$");
                     if (!match.Success)
                     {

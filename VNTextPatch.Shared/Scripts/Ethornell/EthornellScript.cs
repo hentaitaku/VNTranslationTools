@@ -103,7 +103,7 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
                     if (!stringOffsets.TryGetValue(text, out offset))
                     {
                         offset = _codeOffset + _codeLength + (int)stringStream.Length;
-                        if (GlobalVariables.WriteUtf8)
+                        if (GlobalVariables.WriteUtf8 && !GlobalVariables.jisStrings.Contains(text))
                         {
                             stringWriter.WriteZeroTerminatedUtf8String(text);
                         } else
