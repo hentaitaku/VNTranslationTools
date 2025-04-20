@@ -659,7 +659,7 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
             StackItem item = _stringStack.Pop();
             OnStringAddressEncountered(item.Offset, item.Value, ScriptStringType.Internal);
             string funcName = ReadStringAtAddress(item.Value);
-            if (funcName == "_SelectEx")
+            if (funcName == "_SelectEx" || funcName == "_SelectExtend")
                 HandleChoiceScreen();
         }
 
