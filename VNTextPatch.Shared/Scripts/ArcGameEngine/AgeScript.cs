@@ -68,7 +68,15 @@ namespace VNTextPatch.Shared.Scripts.ArcGameEngine
 
             foreach (int addrOffset in _addrOffsets)
             {
-                patcher.PatchAddress(addrOffset);
+                try
+                {
+                    patcher.PatchAddress(addrOffset);
+                }
+                catch (ArgumentException)
+                {
+                    Console.WriteLine("exp -> " + location.ToFilePath());
+                    return;
+                }
             }
         }
 
