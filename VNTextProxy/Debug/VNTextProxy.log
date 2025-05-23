@@ -1,0 +1,53 @@
+﻿  pch.cpp
+  CompilerHelper.cpp
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\CompilerSpecific\CompilerHelper.cpp(51,23): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Util\StringUtil.h(14,22): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\CompilerSpecific\CompilerHelper.cpp(45): message : see reference to function template instantiation 'std::vector<std::string,std::allocator<std::string>> StringUtil::Split<char>(const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &,const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)' being compiled
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Util\StringUtil.h(30,27): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\CompilerSpecific\CompilerHelper.cpp(47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>> StringUtil::Join<char>(const std::vector<std::string,std::allocator<std::string>> &,const std::basic_string<char,std::char_traits<char>,std::allocator<char>> &)' being compiled
+  D2DProportionalizer.cpp
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\D2DProportionalizer.cpp(135,17): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\D2DProportionalizer.cpp(136,16): warning C4244: '=': conversion from 'int' to 'FLOAT', possible loss of data
+  dllmain.cpp
+  GdiProportionalizer.cpp
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(115,25): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(116,28): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(117,28): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(118,26): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(119,31): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(120,32): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(121,26): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\GdiProportionalizer.cpp(122,33): warning C4244: '=': conversion from 'DWORD' to 'BYTE', possible loss of data
+  ImportHooker.cpp
+  LocaleEmulator.cpp
+  BabelPatch.cpp
+  EnginePatches.cpp
+  PE.cpp
+  Proxy.cpp
+  Font.cpp
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Font.cpp(88,18): warning C4244: 'argument': conversion from 'LONG' to 'FLOAT', possible loss of data
+  FontManager.cpp
+  Proportionalizer.cpp
+  SjisTunnelEncoding.cpp
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\SjisTunnelEncoding.cpp(112,41): warning C4018: '<': signed/unsigned mismatch
+  ImeListener.cpp
+  SubtitleDocument.cpp
+  SubtitleLine.cpp
+  SubtitleRenderer.cpp
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Subtitles\SubtitleRenderer.cpp(59,14): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Subtitles\SubtitleRenderer.cpp(61,19): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Subtitles\SubtitleRenderer.cpp(63,19): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Subtitles\SubtitleRenderer.cpp(91,14): warning C4018: '>=': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Subtitles\SubtitleRenderer.cpp(98,31): warning C4018: '<': signed/unsigned mismatch
+E:\dreamsavior\git\VNTranslationTools\VNTextProxy\Subtitles\SubtitleRenderer.cpp(98,103): warning C4018: '<=': signed/unsigned mismatch
+  MemoryUnprotector.cpp
+  MemoryUtil.cpp
+  Generating Code...
+  Compiling...
+  Path.cpp
+  StringUtil.cpp
+  Win32AToWAdapter.cpp
+  Generating Code...
+     Creating library E:\dreamsavior\git\VNTranslationTools\Debug\d2d1.lib and object E:\dreamsavior\git\VNTranslationTools\Debug\d2d1.exp
+d2d1.exp : warning LNK4070: /OUT:xinput1_3.dll directive in .EXP differs from output filename 'E:\dreamsavior\git\VNTranslationTools\Debug\d2d1.dll'; ignoring directive
+  VNTextProxy.vcxproj -> E:\dreamsavior\git\VNTranslationTools\Debug\d2d1.dll
