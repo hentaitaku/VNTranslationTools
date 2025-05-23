@@ -291,6 +291,26 @@ namespace VNTextPatch
                 List<string> unnamedArgsList = new List<string>();
                 foreach (string arg in args)
                 {
+                    if (arg == "--read-utf8")
+                    {
+                        GlobalVariables.ReadUtf8 = true;
+                        continue;
+                    }
+                    if (arg == "--write-utf8")
+                    {
+                        GlobalVariables.WriteUtf8 = true;
+                        continue;
+                    }
+                    if (arg == "--no-wrap")
+                    {
+                        GlobalVariables.NoWrap = true;
+                        continue;
+                    }
+                    if (arg.StartsWith("-j"))
+                    {
+                        GlobalVariables.jisStrings.Add(arg.Substring(2));
+                        continue;
+                    }
                     Match match = Regex.Match(arg, @"--(?<name>\w+)=(?<value>.*)$");
                     if (!match.Success)
                     {

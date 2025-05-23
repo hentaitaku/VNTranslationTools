@@ -633,7 +633,7 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
                 if (specializedReader != null)
                     specializedReader();
                 else
-                    ReadOperands(OperandTemplates[opcode]);
+                    ReadOperands(OperandTemplates.GetOrDefault(opcode, ""));
 
                 if ((opcode == 0x001B || opcode == 0x00F4) && _largestCodeAddressOperandEncountered < (int)_reader.BaseStream.Position - CodeOffset)
                     break;
@@ -659,7 +659,7 @@ namespace VNTextPatch.Shared.Scripts.Ethornell
             StackItem item = _stringStack.Pop();
             OnStringAddressEncountered(item.Offset, item.Value, ScriptStringType.Internal);
             string funcName = ReadStringAtAddress(item.Value);
-            if (funcName == "_SelectEx")
+            if (funcName == "_SelectEx" || funcName == "_SelectExtend")
                 HandleChoiceScreen();
         }
 

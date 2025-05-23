@@ -185,6 +185,33 @@ namespace VNTextPatch.Shared.Util
             return length + 1;
         }
 
+        public static int WriteMixedString(this BinaryWriter writer, string str)
+        {
+            var bytes = Encoding.UTF8.GetBytes(str);
+            foreach (var s in GlobalVariables.jisStrings)
+            {
+                var sbytes = Encoding.UTF8.GetBytes(s);
+                var obytes = StringUtil.SjisEncoding.GetBytes(s);
+                int index = 0;
+                while (true)
+                {
+                    index = bytes.IndexOf(sbytes, index);
+                    if (index == -1)
+                        break;
+                    var newBytes = new byte[bytes.Length - sbytes.Length + obytes.Length];
+                    Buffer.BlockCopy(bytes, 0, newBytes, 0, index);
+                    Buffer.BlockCopy(obytes, 0, newBytes, index, obytes.Length);
+                    Buffer.BlockCopy(bytes, index + sbytes.Length, newBytes, index + obytes.Length,
+                             bytes.Length - (index + sbytes.Length));
+                    bytes = newBytes;
+                    index += obytes.Length;
+                }
+            }
+            writer.Write(bytes);
+            writer.Write((byte)0);
+            return bytes.Length + 1;
+        }
+
         public static int WriteZeroTerminatedUtf16String(this BinaryWriter writer, string str)
         {
             int length = Encoding.Unicode.GetBytes(str, 0, str.Length, TextBuffer, 0);
