@@ -18,7 +18,7 @@ namespace VNTextPatch.Shared.Scripts.Kirikiri
         private static readonly string[] EnterNameCommands = { "ns" };
         private static readonly string[] ExitNameCommands = { "nse" };
         private static readonly string[] MessageCommands = { "sel01", "sel02", "sel03", "sel04", "AddSelect", "ruby" };
-        private static readonly string[] AllowedInlineCommands = { "r", "ruby", "ruby_c", "heart", "mruby", "・", "★" };
+        private static readonly string[] AllowedInlineCommands = { "r", "ruby", "ruby_c", "ch", "heart", "mruby", "・", "★" };
 
         private ScriptStringType _currentStringType;
 
@@ -220,6 +220,7 @@ namespace VNTextPatch.Shared.Scripts.Kirikiri
             string text = base.GetTextForRead(range);
             text = text.Replace("\r\n", "");
             text = text.Replace("@r", "\r\n");
+            text = text.Replace("][ch text=", " char=");
             text = ConvertKirikiriRubyToPlain(text);
             text = text.Replace("[l]", "|");
             text = text.Replace("[r]", "\r\n");
